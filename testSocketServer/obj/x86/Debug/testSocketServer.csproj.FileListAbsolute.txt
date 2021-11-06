@@ -1,0 +1,6 @@
+/home/user/Projects/testSocketServer/bin/Debug/testSocketServer.exe
+/home/user/Projects/testSocketServer/bin/Debug/testSocketServer.pdb
+/home/user/Projects/testSocketServer/obj/x86/Debug/testSocketServer.csprojAssemblyReference.cache
+/home/user/Projects/testSocketServer/obj/x86/Debug/testSocketServer.csproj.CoreCompileInputs.cache
+/home/user/Projects/testSocketServer/obj/x86/Debug/testSocketServer.exe
+/home/user/Projects/testSocketServer/obj/x86/Debug/testSocketServer.pdb

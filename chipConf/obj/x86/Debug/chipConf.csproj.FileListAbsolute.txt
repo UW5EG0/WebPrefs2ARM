@@ -1,0 +1,6 @@
+/home/user/Projects/chipConf/bin/Debug/chipConf.exe
+/home/user/Projects/chipConf/bin/Debug/chipConf.pdb
+/home/user/Projects/chipConf/obj/x86/Debug/chipConf.csprojAssemblyReference.cache
+/home/user/Projects/chipConf/obj/x86/Debug/chipConf.csproj.CoreCompileInputs.cache
+/home/user/Projects/chipConf/obj/x86/Debug/chipConf.exe
+/home/user/Projects/chipConf/obj/x86/Debug/chipConf.pdb
