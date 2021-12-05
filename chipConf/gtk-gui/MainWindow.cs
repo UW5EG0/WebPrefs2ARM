@@ -23,6 +23,8 @@ public partial class MainWindow
 
 	private global::Gtk.Button buttonReset;
 
+	private global::Gtk.Button buttonToggleLog;
+
 	private global::Gtk.Button buttonRestartDevice;
 
 	private global::Gtk.ScrolledWindow GtkScrolledWindow;
@@ -120,6 +122,20 @@ public partial class MainWindow
 		w6.Expand = false;
 		w6.Fill = false;
 		// Container child headLine.Gtk.Box+BoxChild
+		this.buttonToggleLog = new global::Gtk.Button();
+		this.buttonToggleLog.CanFocus = true;
+		this.buttonToggleLog.Name = "buttonToggleLog";
+		this.buttonToggleLog.UseUnderline = true;
+		this.buttonToggleLog.Label = global::Mono.Unix.Catalog.GetString("Лог");
+		global::Gtk.Image w7 = new global::Gtk.Image();
+		w7.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-file", global::Gtk.IconSize.Button);
+		this.buttonToggleLog.Image = w7;
+		this.headLine.Add(this.buttonToggleLog);
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.headLine[this.buttonToggleLog]));
+		w8.Position = 3;
+		w8.Expand = false;
+		w8.Fill = false;
+		// Container child headLine.Gtk.Box+BoxChild
 		this.buttonRestartDevice = new global::Gtk.Button();
 		this.buttonRestartDevice.Sensitive = false;
 		this.buttonRestartDevice.CanFocus = true;
@@ -127,33 +143,33 @@ public partial class MainWindow
 		this.buttonRestartDevice.UseUnderline = true;
 		this.buttonRestartDevice.Label = global::Mono.Unix.Catalog.GetString("Перезагрузить устройство");
 		this.headLine.Add(this.buttonRestartDevice);
-		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.headLine[this.buttonRestartDevice]));
-		w7.PackType = ((global::Gtk.PackType)(1));
-		w7.Position = 3;
-		w7.Expand = false;
-		w7.Fill = false;
+		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.headLine[this.buttonRestartDevice]));
+		w9.PackType = ((global::Gtk.PackType)(1));
+		w9.Position = 4;
+		w9.Expand = false;
+		w9.Fill = false;
 		this.vbox1.Add(this.headLine);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.headLine]));
-		w8.Position = 0;
-		w8.Expand = false;
-		w8.Fill = false;
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.headLine]));
+		w10.Position = 0;
+		w10.Expand = false;
+		w10.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow();
 		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-		global::Gtk.Viewport w9 = new global::Gtk.Viewport();
-		w9.ShadowType = ((global::Gtk.ShadowType)(0));
+		global::Gtk.Viewport w11 = new global::Gtk.Viewport();
+		w11.ShadowType = ((global::Gtk.ShadowType)(0));
 		// Container child GtkViewport.Gtk.Container+ContainerChild
 		this.table4 = new global::Gtk.Table(((uint)(1)), ((uint)(3)), true);
 		this.table4.Name = "table4";
 		this.table4.RowSpacing = ((uint)(6));
 		this.table4.ColumnSpacing = ((uint)(6));
-		w9.Add(this.table4);
-		this.GtkScrolledWindow.Add(w9);
+		w11.Add(this.table4);
+		this.GtkScrolledWindow.Add(w11);
 		this.vbox1.Add(this.GtkScrolledWindow);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
-		w12.Position = 1;
+		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
+		w14.Position = 1;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.statusbar1 = new global::Gtk.Statusbar();
 		this.statusbar1.Name = "statusbar1";
@@ -163,19 +179,19 @@ public partial class MainWindow
 		this.labelStatus.Name = "labelStatus";
 		this.labelStatus.LabelProp = global::Mono.Unix.Catalog.GetString("Disconnected");
 		this.statusbar1.Add(this.labelStatus);
-		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelStatus]));
-		w13.Position = 0;
-		w13.Expand = false;
-		w13.Fill = false;
+		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelStatus]));
+		w15.Position = 0;
+		w15.Expand = false;
+		w15.Fill = false;
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.labelHost = new global::Gtk.Label();
 		this.labelHost.Name = "labelHost";
 		this.labelHost.LabelProp = global::Mono.Unix.Catalog.GetString("Host/IP:");
 		this.statusbar1.Add(this.labelHost);
-		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelHost]));
-		w14.Position = 2;
-		w14.Expand = false;
-		w14.Fill = false;
+		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelHost]));
+		w16.Position = 2;
+		w16.Expand = false;
+		w16.Fill = false;
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.entryHost = new global::Gtk.Entry();
 		this.entryHost.CanFocus = true;
@@ -185,17 +201,17 @@ public partial class MainWindow
 		this.entryHost.WidthChars = 8;
 		this.entryHost.InvisibleChar = '•';
 		this.statusbar1.Add(this.entryHost);
-		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.entryHost]));
-		w15.Position = 3;
+		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.entryHost]));
+		w17.Position = 3;
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.labelPort = new global::Gtk.Label();
 		this.labelPort.Name = "labelPort";
 		this.labelPort.LabelProp = global::Mono.Unix.Catalog.GetString("Port:");
 		this.statusbar1.Add(this.labelPort);
-		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelPort]));
-		w16.Position = 4;
-		w16.Expand = false;
-		w16.Fill = false;
+		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelPort]));
+		w18.Position = 4;
+		w18.Expand = false;
+		w18.Fill = false;
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.portSelector = new global::Gtk.SpinButton(1D, 65535D, 1D);
 		this.portSelector.CanFocus = true;
@@ -205,24 +221,24 @@ public partial class MainWindow
 		this.portSelector.Numeric = true;
 		this.portSelector.Value = 8080D;
 		this.statusbar1.Add(this.portSelector);
-		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.portSelector]));
-		w17.Position = 5;
-		w17.Expand = false;
-		w17.Fill = false;
+		global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.portSelector]));
+		w19.Position = 5;
+		w19.Expand = false;
+		w19.Fill = false;
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.buttonConnect = new global::Gtk.Button();
 		this.buttonConnect.CanFocus = true;
 		this.buttonConnect.Name = "buttonConnect";
 		this.buttonConnect.UseUnderline = true;
 		this.buttonConnect.Label = global::Mono.Unix.Catalog.GetString("Подключиться");
-		global::Gtk.Image w18 = new global::Gtk.Image();
-		w18.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-connect", global::Gtk.IconSize.Menu);
-		this.buttonConnect.Image = w18;
+		global::Gtk.Image w20 = new global::Gtk.Image();
+		w20.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-connect", global::Gtk.IconSize.Menu);
+		this.buttonConnect.Image = w20;
 		this.statusbar1.Add(this.buttonConnect);
-		global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.buttonConnect]));
-		w19.Position = 6;
-		w19.Expand = false;
-		w19.Fill = false;
+		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.buttonConnect]));
+		w21.Position = 6;
+		w21.Expand = false;
+		w21.Fill = false;
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.buttonDisconnect = new global::Gtk.Button();
 		this.buttonDisconnect.Sensitive = false;
@@ -230,19 +246,19 @@ public partial class MainWindow
 		this.buttonDisconnect.Name = "buttonDisconnect";
 		this.buttonDisconnect.UseUnderline = true;
 		this.buttonDisconnect.Label = global::Mono.Unix.Catalog.GetString("Отключиться");
-		global::Gtk.Image w20 = new global::Gtk.Image();
-		w20.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-disconnect", global::Gtk.IconSize.Menu);
-		this.buttonDisconnect.Image = w20;
+		global::Gtk.Image w22 = new global::Gtk.Image();
+		w22.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-disconnect", global::Gtk.IconSize.Menu);
+		this.buttonDisconnect.Image = w22;
 		this.statusbar1.Add(this.buttonDisconnect);
-		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.buttonDisconnect]));
-		w21.Position = 7;
-		w21.Expand = false;
-		w21.Fill = false;
+		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.buttonDisconnect]));
+		w23.Position = 7;
+		w23.Expand = false;
+		w23.Fill = false;
 		this.vbox1.Add(this.statusbar1);
-		global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.statusbar1]));
-		w22.Position = 2;
-		w22.Expand = false;
-		w22.Fill = false;
+		global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.statusbar1]));
+		w24.Position = 2;
+		w24.Expand = false;
+		w24.Fill = false;
 		this.Add(this.vbox1);
 		if ((this.Child != null))
 		{
@@ -255,6 +271,7 @@ public partial class MainWindow
 		this.buttonReadSpecs.Clicked += new global::System.EventHandler(this.EventReadSpecsClicked);
 		this.buttonWriteSpecs.Clicked += new global::System.EventHandler(this.EventWriteSpecsClicked);
 		this.buttonReset.Clicked += new global::System.EventHandler(this.EventResetDeviceClicked);
+		this.buttonToggleLog.Clicked += new global::System.EventHandler(this.eventLogDisplayingToggle);
 		this.buttonRestartDevice.Clicked += new global::System.EventHandler(this.EventRebootDeviceClicked);
 		this.buttonConnect.Clicked += new global::System.EventHandler(this.EventButtonConnectClicked);
 		this.buttonDisconnect.Clicked += new global::System.EventHandler(this.OnButtonDisconnectClicked);

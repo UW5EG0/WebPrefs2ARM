@@ -7,7 +7,7 @@ namespace chipConf
         public string SpecName;
         public int charCount;
         public PropertyClass property;
-
+        public string SpecValue;
         public textSpecWidget()
         {
             this.Build();
@@ -19,14 +19,15 @@ namespace chipConf
         }
 
         internal
-        void SetPointer(PropertyClass propertyClass)
+        void setPointer(PropertyClass propertyClass)
         {
             this.property = propertyClass;
 
         }
         internal void setValue(string v)
         {
-            this.entryValue.Text = v;
+            this.SpecValue = v;
+            this.entryValue.Text = this.SpecValue;
         }
 
         internal void setCharsCount(int newCharCount)
@@ -39,10 +40,13 @@ namespace chipConf
 
         protected void EntryValueChanged(object sender, EventArgs e)
         {
-           try { 
-               this.property.ParseValue(this.entryValue.Text); 
+           try {
+                this.SpecValue = this.entryValue.Text;
+                this.property.ParseValue(this.SpecValue);
+                this.property.isChanged = true;
                } catch (Exception ex) {
-                PropertiesSocket.alert(ex.Message);
+                this.property.isChanged = false;
+                PropertiesSocket.Alert(ex.Message);
                }
 
             this.labelCharCounter.Text = "Chars: "+this.entryValue.Text.Length.ToString()+"/" + this.charCount.ToString();

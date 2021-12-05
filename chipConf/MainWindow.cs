@@ -1,8 +1,9 @@
 ﻿using System;
+using chipConf;
 using Gtk;
 public partial class MainWindow : Gtk.Window
 {
-
+    private LogWindow log;
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
@@ -37,6 +38,17 @@ public partial class MainWindow : Gtk.Window
             ActivateButtons(false);
 
         }
+    }
+
+    internal bool ForceDisconnect()
+    {
+        OnButtonDisconnectClicked(this, null);
+        return true;
+    }
+
+    internal void attachLogWindowToggler(LogWindow logScreen)
+    {
+        this.log = logScreen; 
     }
 
     protected void ActivateButtons(bool activate) {
@@ -83,7 +95,7 @@ public partial class MainWindow : Gtk.Window
             foreach (chipConf.PropertyClass property in chipConf.MainClass.configConnection.properties)
             {
                 property.MakeWidget();
-                table4.Attach(property.widget, i % 3, i%3+1, i/3, i / 3+1);
+                table4.Attach(property.widget, i % 3, i % 3 + 1, i / 3, i / 3 + 1);
                 i++;
             }
             this.labelStatus.LabelProp = "Ready";
@@ -98,24 +110,24 @@ public partial class MainWindow : Gtk.Window
         MessageDialog md = new Gtk.MessageDialog(null, DialogFlags.Modal,
                                                    MessageType.Warning,
                                                    ButtonsType.Ok,
-                                                   "Alert!");
-        md.SecondaryText = message;
+                                                   "Alert!")
+        {
+            SecondaryText = message
+        };
         md.Run();
         md.Destroy();
     }
 
     protected void EventWriteSpecsClicked(object sender, EventArgs e)
     {
-        foreach (chipConf.PropertyClass property in chipConf.MainClass.configConnection.properties)
-        {
-            chipConf.MainClass.configConnection.SaveValues();
-        }
-    }
+     
+         chipConf.MainClass.configConnection.SaveValues();
+     }
 
     protected void EventResetDeviceClicked(object sender, EventArgs e)
     {
         chipConf.MainClass.configConnection.ResetDevice();
-        EventReadSpecsClicked(this, null);
+        EventReadSpecsClicked(sender, e);
     }
 
     protected void EventRebootDeviceClicked(object sender, EventArgs e)
@@ -127,5 +139,10 @@ public partial class MainWindow : Gtk.Window
         }
         chipConf.MainClass.configConnection.Disconnect();
         ActivateButtons(false);
+    }
+
+    protected void eventLogDisplayingToggle(object sender, EventArgs e)
+    {
+        log.Visible = !log.Visible;
     }
 }

@@ -1,3 +1,4 @@
 /home/user/Projects/chipConf/bin/Release/chipConf.exe
 /home/user/Projects/chipConf/obj/x86/Release/chipConf.csproj.CoreCompileInputs.cache
 /home/user/Projects/chipConf/obj/x86/Release/chipConf.exe
+/home/user/Projects/chipConf/obj/x86/Release/chipConf.csprojAssemblyReference.cache

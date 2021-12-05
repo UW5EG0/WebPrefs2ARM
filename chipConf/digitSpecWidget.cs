@@ -46,7 +46,7 @@ namespace chipConf
         protected void EntryValueChanged(object sender, EventArgs e)
         {
             try {
-                this.SpecValue = (this.isInteger) ? (Int64.Parse(this.entryValue.Text)) : (Double.Parse(this.entryValue.Text));
+                this.SpecValue = (this.isInteger) ? (Int64.Parse(this.entryValue.Text)) : (Double.Parse(this.entryValue.Text.Replace(',','.')));
                 this.property.ParseValue(this.SpecValue.ToString());
                 this.entryValue.Text = this.SpecValue.ToString();
                 Gdk.Color clr = new Gdk.Color();
@@ -55,6 +55,7 @@ namespace chipConf
                 ValueToSlider();
             } catch (Exception ex) {
                 Gdk.Color clr = new Gdk.Color();
+                //this.property.isChanged = false;
                 Gdk.Color.Parse("red", ref clr);
                 this.entryValue.ModifyBg(Gtk.StateType.Normal, clr);
             }
@@ -76,15 +77,17 @@ namespace chipConf
             Double step = (this.isInteger) ? ((Int64)this.SpecStepValue) : ((Double)this.SpecStepValue);
             this.SpecValue = (this.isInteger)?(Math.Round(val)):(Math.Round(val/step)*step);
             this.entryValue.Text = this.SpecValue.ToString();
+            this.property.value = (this.isInteger) ? ((Int64)this.SpecValue) : ((Double)this.SpecValue);
         }
 
         internal void setValue(string v)
         {
             try
             {
-                this.SpecValue = (this.isInteger)?(Int64.Parse(v)):(Double.Parse(v));
+                this.SpecValue = (this.isInteger)?(Int64.Parse(v)):(Double.Parse(v.Replace('.',',')));
                 this.entryValue.Text = this.SpecValue.ToString();
                 this.ValueToSlider();
+                this.property.value = (this.isInteger) ? ((Int64)this.SpecValue) : ((Double)this.SpecValue);
             }
             catch (Exception ex)
             {
@@ -100,8 +103,10 @@ namespace chipConf
         internal void setStep(object step)
         {
             try
-            {
+            {   //обновляем шаг
                 this.SpecStepValue = (this.isInteger) ? (Int64.Parse(step.ToString())) : (Double.Parse(step.ToString()));
+                //округляем значение на экране если это вещественное число
+                this.SpecValue = (this.isInteger) ? ((Int64)this.SpecValue - ((Int64)this.SpecValue % (Int64)this.SpecStepValue)) : (Math.Round((Double)this.SpecValue / (Double)this.SpecStepValue) * (Double)this.SpecStepValue);
                 this.ValueToSlider();
             }
             catch (Exception ex) { 

@@ -75,6 +75,9 @@
     <Compile Include="gtk-gui\chipConf.textSpecWidget.cs" />
     <Compile Include="digitSpecWidget.cs" />
     <Compile Include="gtk-gui\chipConf.digitSpecWidget.cs" />
+    <Compile Include="unsigned.cs" />
+    <Compile Include="LogWindow.cs" />
+    <Compile Include="gtk-gui\chipConf.LogWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

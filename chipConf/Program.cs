@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define LOGGING_INNER_FUNCTIONS
+
+using System;
 using Gtk;
 
 namespace chipConf
@@ -11,7 +13,13 @@ namespace chipConf
         {
             Application.Init();
             MainWindow win = new MainWindow();
-            configConnection = new PropertiesSocket("127.0.0.1", 8080);
+            LogWindow logScreen = new LogWindow();
+            configConnection = new PropertiesSocket("10.10.10.104", 3324);
+            configConnection.SetLogWindow(logScreen);
+            configConnection.AttachWindowEventOnDisconnect(win.ForceDisconnect);
+            logScreen.AttachSocket(configConnection);
+            win.attachLogWindowToggler(logScreen);
+
             win.Show();
             Application.Run();
         }
