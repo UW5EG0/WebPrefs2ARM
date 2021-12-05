@@ -1,0 +1,8 @@
+telnetConfigServer.c:23:9:telnetConfigServer_InterruptCallback	16	static
+telnetConfigServer.c:83:6:telnetConfigServer_Init	16	static
+telnetConfigServer.c:90:10:telnetConfigServer_getPort	4	static
+telnetConfigServer.c:93:6:telnetConfigServer_registerParameters	4	static
+telnetConfigServer.c:97:9:telnetConfigServer_SocketStatus	4	static
+telnetConfigServer.c:100:9:telnetConfigServer_SocketProcess	4	static
+telnetConfigServer.c:103:6:telnetConfigServer_SocketOpen	4	static
+telnetConfigServer.c:107:6:telnetConfigServer_SocketClose	8	static

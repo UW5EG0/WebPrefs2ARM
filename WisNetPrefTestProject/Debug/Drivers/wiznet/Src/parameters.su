@@ -1,0 +1,9 @@
+parameters.c:23:6:linkParametersStorage	16	static
+parameters.c:31:9:processParameter	16	static
+parameters.c:35:8:getIndexOfVariable	24	static
+parameters.c:45:6:clearCommandBuffer	4	static
+parameters.c:52:6:showVariable	16	static
+parameters.c:57:9:seekToChar	24	static
+parameters.c:64:9:varToString	16	static
+parameters.c:82:9:varRangeToString	32	static
+parameters.c:132:10:parseCommand	56	static
