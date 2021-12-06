@@ -53,22 +53,22 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.UIManager = new global::Gtk.UIManager();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
-		this.Action = new global::Gtk.Action("Action", global::Mono.Unix.Catalog.GetString("Управление настройками"), null, null);
-		this.Action.ShortLabel = global::Mono.Unix.Catalog.GetString("Управление настройками");
+		this.Action = new global::Gtk.Action("Action", "Управление настройками", null, null);
+		this.Action.ShortLabel = "Управление настройками";
 		w1.Add(this.Action, null);
-		this.ActionReadSpecsList = new global::Gtk.Action("ActionReadSpecsList", global::Mono.Unix.Catalog.GetString("Считать перечень настроек"), null, null);
-		this.ActionReadSpecsList.ShortLabel = global::Mono.Unix.Catalog.GetString("Считать перечень настроек");
+		this.ActionReadSpecsList = new global::Gtk.Action("ActionReadSpecsList", "Считать перечень настроек", null, null);
+		this.ActionReadSpecsList.ShortLabel = "Считать перечень настроек";
 		w1.Add(this.ActionReadSpecsList, "<Mod2>r");
-		this.ActionResetSpecs = new global::Gtk.Action("ActionResetSpecs", global::Mono.Unix.Catalog.GetString("Сбросить настройки до базовых"), null, null);
-		this.ActionResetSpecs.ShortLabel = global::Mono.Unix.Catalog.GetString("Сбросить настройки до базовых");
+		this.ActionResetSpecs = new global::Gtk.Action("ActionResetSpecs", "Сбросить настройки до базовых", null, null);
+		this.ActionResetSpecs.ShortLabel = "Сбросить настройки до базовых";
 		w1.Add(this.ActionResetSpecs, "<Primary><Mod2>d");
-		this.ActionWriteSpecs = new global::Gtk.Action("ActionWriteSpecs", global::Mono.Unix.Catalog.GetString("Записать изменения"), null, null);
-		this.ActionWriteSpecs.ShortLabel = global::Mono.Unix.Catalog.GetString("Записать изменения");
+		this.ActionWriteSpecs = new global::Gtk.Action("ActionWriteSpecs", "Записать изменения", null, null);
+		this.ActionWriteSpecs.ShortLabel = "Записать изменения";
 		w1.Add(this.ActionWriteSpecs, "<Primary><Mod2>s");
 		this.UIManager.InsertActionGroup(w1, 0);
 		this.AddAccelGroup(this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString("ChipLANProg");
+		this.Title = "ChipLANProg";
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		this.BorderWidth = ((uint)(6));
 		// Container child MainWindow.Gtk.Container+ContainerChild
@@ -85,7 +85,7 @@ public partial class MainWindow
 		this.buttonReadSpecs.CanFocus = true;
 		this.buttonReadSpecs.Name = "buttonReadSpecs";
 		this.buttonReadSpecs.UseUnderline = true;
-		this.buttonReadSpecs.Label = global::Mono.Unix.Catalog.GetString("Считать настройки");
+		this.buttonReadSpecs.Label = "Считать настройки";
 		global::Gtk.Image w2 = new global::Gtk.Image();
 		w2.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-find", global::Gtk.IconSize.Button);
 		this.buttonReadSpecs.Image = w2;
@@ -100,7 +100,7 @@ public partial class MainWindow
 		this.buttonWriteSpecs.CanFocus = true;
 		this.buttonWriteSpecs.Name = "buttonWriteSpecs";
 		this.buttonWriteSpecs.UseUnderline = true;
-		this.buttonWriteSpecs.Label = global::Mono.Unix.Catalog.GetString("Записать");
+		this.buttonWriteSpecs.Label = "Записать";
 		global::Gtk.Image w4 = new global::Gtk.Image();
 		w4.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-save", global::Gtk.IconSize.Menu);
 		this.buttonWriteSpecs.Image = w4;
@@ -115,7 +115,7 @@ public partial class MainWindow
 		this.buttonReset.CanFocus = true;
 		this.buttonReset.Name = "buttonReset";
 		this.buttonReset.UseUnderline = true;
-		this.buttonReset.Label = global::Mono.Unix.Catalog.GetString("Сбросить до заводских");
+		this.buttonReset.Label = "Сбросить до заводских";
 		this.headLine.Add(this.buttonReset);
 		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.headLine[this.buttonReset]));
 		w6.Position = 2;
@@ -126,7 +126,7 @@ public partial class MainWindow
 		this.buttonToggleLog.CanFocus = true;
 		this.buttonToggleLog.Name = "buttonToggleLog";
 		this.buttonToggleLog.UseUnderline = true;
-		this.buttonToggleLog.Label = global::Mono.Unix.Catalog.GetString("Лог");
+		this.buttonToggleLog.Label = "Лог";
 		global::Gtk.Image w7 = new global::Gtk.Image();
 		w7.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-file", global::Gtk.IconSize.Button);
 		this.buttonToggleLog.Image = w7;
@@ -141,7 +141,7 @@ public partial class MainWindow
 		this.buttonRestartDevice.CanFocus = true;
 		this.buttonRestartDevice.Name = "buttonRestartDevice";
 		this.buttonRestartDevice.UseUnderline = true;
-		this.buttonRestartDevice.Label = global::Mono.Unix.Catalog.GetString("Перезагрузить устройство");
+		this.buttonRestartDevice.Label = "Перезагрузить устройство";
 		this.headLine.Add(this.buttonRestartDevice);
 		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.headLine[this.buttonRestartDevice]));
 		w9.PackType = ((global::Gtk.PackType)(1));
@@ -177,7 +177,7 @@ public partial class MainWindow
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.labelStatus = new global::Gtk.Label();
 		this.labelStatus.Name = "labelStatus";
-		this.labelStatus.LabelProp = global::Mono.Unix.Catalog.GetString("Disconnected");
+		this.labelStatus.LabelProp = "Disconnected";
 		this.statusbar1.Add(this.labelStatus);
 		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelStatus]));
 		w15.Position = 0;
@@ -186,7 +186,7 @@ public partial class MainWindow
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.labelHost = new global::Gtk.Label();
 		this.labelHost.Name = "labelHost";
-		this.labelHost.LabelProp = global::Mono.Unix.Catalog.GetString("Host/IP:");
+		this.labelHost.LabelProp = "Host/IP:";
 		this.statusbar1.Add(this.labelHost);
 		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelHost]));
 		w16.Position = 2;
@@ -196,7 +196,7 @@ public partial class MainWindow
 		this.entryHost = new global::Gtk.Entry();
 		this.entryHost.CanFocus = true;
 		this.entryHost.Name = "entryHost";
-		this.entryHost.Text = global::Mono.Unix.Catalog.GetString("127.0.0.1");
+		this.entryHost.Text = "127.0.0.1";
 		this.entryHost.IsEditable = true;
 		this.entryHost.WidthChars = 8;
 		this.entryHost.InvisibleChar = '•';
@@ -206,7 +206,7 @@ public partial class MainWindow
 		// Container child statusbar1.Gtk.Box+BoxChild
 		this.labelPort = new global::Gtk.Label();
 		this.labelPort.Name = "labelPort";
-		this.labelPort.LabelProp = global::Mono.Unix.Catalog.GetString("Port:");
+		this.labelPort.LabelProp = "Port:";
 		this.statusbar1.Add(this.labelPort);
 		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.statusbar1[this.labelPort]));
 		w18.Position = 4;
@@ -230,7 +230,7 @@ public partial class MainWindow
 		this.buttonConnect.CanFocus = true;
 		this.buttonConnect.Name = "buttonConnect";
 		this.buttonConnect.UseUnderline = true;
-		this.buttonConnect.Label = global::Mono.Unix.Catalog.GetString("Подключиться");
+		this.buttonConnect.Label = "Подключиться";
 		global::Gtk.Image w20 = new global::Gtk.Image();
 		w20.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-connect", global::Gtk.IconSize.Menu);
 		this.buttonConnect.Image = w20;
@@ -245,7 +245,7 @@ public partial class MainWindow
 		this.buttonDisconnect.CanFocus = true;
 		this.buttonDisconnect.Name = "buttonDisconnect";
 		this.buttonDisconnect.UseUnderline = true;
-		this.buttonDisconnect.Label = global::Mono.Unix.Catalog.GetString("Отключиться");
+		this.buttonDisconnect.Label = "Отключиться";
 		global::Gtk.Image w22 = new global::Gtk.Image();
 		w22.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-disconnect", global::Gtk.IconSize.Menu);
 		this.buttonDisconnect.Image = w22;

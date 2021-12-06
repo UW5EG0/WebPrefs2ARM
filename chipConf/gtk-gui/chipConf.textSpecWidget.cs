@@ -25,7 +25,7 @@ namespace chipConf
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.labelName = new global::Gtk.Label();
 			this.labelName.Name = "labelName";
-			this.labelName.LabelProp = global::Mono.Unix.Catalog.GetString("Name");
+			this.labelName.LabelProp = "Name";
 			this.vbox1.Add(this.labelName);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.labelName]));
 			w1.Position = 0;
@@ -45,7 +45,7 @@ namespace chipConf
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.labelCharCounter = new global::Gtk.Label();
 			this.labelCharCounter.Name = "labelCharCounter";
-			this.labelCharCounter.LabelProp = global::Mono.Unix.Catalog.GetString("Chars: 0/32");
+			this.labelCharCounter.LabelProp = "Chars: 0/32";
 			this.vbox1.Add(this.labelCharCounter);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.labelCharCounter]));
 			w3.Position = 2;

@@ -23,7 +23,7 @@ namespace chipConf
 			global::Stetic.Gui.Initialize(this);
 			// Widget chipConf.LogWindow
 			this.Name = "chipConf.LogWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("LogWindow");
+			this.Title = "LogWindow";
 			this.TypeHint = ((global::Gdk.WindowTypeHint)(2));
 			this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 			this.BorderWidth = ((uint)(3));
@@ -60,7 +60,7 @@ namespace chipConf
 			this.buttonClear.CanFocus = true;
 			this.buttonClear.Name = "buttonClear";
 			this.buttonClear.UseUnderline = true;
-			this.buttonClear.Label = global::Mono.Unix.Catalog.GetString("Очистить лог");
+			this.buttonClear.Label = "Очистить лог";
 			global::Gtk.Image w3 = new global::Gtk.Image();
 			w3.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-delete", global::Gtk.IconSize.Button);
 			this.buttonClear.Image = w3;
@@ -84,7 +84,7 @@ namespace chipConf
 			this.button1.CanFocus = true;
 			this.button1.Name = "button1";
 			this.button1.UseUnderline = true;
-			this.button1.Label = global::Mono.Unix.Catalog.GetString("Отправить");
+			this.button1.Label = "Отправить";
 			global::Gtk.Image w6 = new global::Gtk.Image();
 			w6.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-ok", global::Gtk.IconSize.Button);
 			this.button1.Image = w6;

@@ -39,7 +39,7 @@ namespace chipConf
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.labelName = new global::Gtk.Label();
 			this.labelName.Name = "labelName";
-			this.labelName.LabelProp = global::Mono.Unix.Catalog.GetString("Name");
+			this.labelName.LabelProp = "Name";
 			this.vbox1.Add(this.labelName);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.labelName]));
 			w1.Position = 0;
@@ -66,7 +66,7 @@ namespace chipConf
 			this.entryValue = new global::Gtk.Entry();
 			this.entryValue.CanFocus = true;
 			this.entryValue.Name = "entryValue";
-			this.entryValue.Text = global::Mono.Unix.Catalog.GetString("0.000");
+			this.entryValue.Text = "0.000";
 			this.entryValue.IsEditable = true;
 			this.entryValue.InvisibleChar = '•';
 			this.hbox1.Add(this.entryValue);
@@ -106,7 +106,7 @@ namespace chipConf
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.labelMinValue = new global::Gtk.Label();
 			this.labelMinValue.Name = "labelMinValue";
-			this.labelMinValue.LabelProp = global::Mono.Unix.Catalog.GetString("-1000");
+			this.labelMinValue.LabelProp = "-1000";
 			this.hbox2.Add(this.labelMinValue);
 			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.labelMinValue]));
 			w9.Position = 0;
@@ -126,7 +126,7 @@ namespace chipConf
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.labelMaxValue = new global::Gtk.Label();
 			this.labelMaxValue.Name = "labelMaxValue";
-			this.labelMaxValue.LabelProp = global::Mono.Unix.Catalog.GetString("1000");
+			this.labelMaxValue.LabelProp = "1000";
 			this.hbox2.Add(this.labelMaxValue);
 			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.labelMaxValue]));
 			w11.Position = 2;

@@ -8,10 +8,8 @@ namespace chipConf
         public int charCount;
         public PropertyClass property;
         public string SpecValue;
-        public textSpecWidget()
-        {
-            this.Build();
-        }
+        public textSpecWidget() => Build();
+
         public void setName(string newName)
         {
             this.SpecName = newName;

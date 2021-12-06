@@ -32,7 +32,7 @@ public partial class MainWindow : Gtk.Window
                 this.labelStatus.LabelProp = "Test Answer failed";
 
                 ActivateButtons(false);
-            };
+            }
         } else {
             this.labelStatus.LabelProp = "Failed";
             ActivateButtons(false);
